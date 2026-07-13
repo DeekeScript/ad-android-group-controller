@@ -1,4 +1,5 @@
 # DeekeHub —— 新一代 Android 自动化云平台
+<img src='https://home.deeke.top/Index/githubStatistic?name=github-ad-android-group-controller' width=0 height=0 />
 
 > **让 Android 自动化，从“控制一台手机”，升级到“管理成千上万台设备”。**
 
