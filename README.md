@@ -2,9 +2,7 @@
 
 > 基于 DeekeScript 自动化引擎打造的 Android自动化管理平台，帮助开发者和企业统一管理 Android设备、自动化脚本和任务。
 
-产品体验：
-
-https://hub.deeke.cn
+产品体验：https://hub.deeke.cn
 
 
 ![GitHub stars](https://img.shields.io/github/stars/your-repo?style=flat-square)
@@ -541,6 +539,4 @@ DeekeHub 负责让 Android自动化设备和任务更容易管理。
 ![DeekeHub开发群](image.png)
 
 
-> 如需联系作者本人，请访问：
->
-> https://hub.deeke.cn
+> 如需联系作者本人，请访问： https://hub.deeke.cn
