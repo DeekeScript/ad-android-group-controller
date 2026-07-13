@@ -42,6 +42,13 @@
 
 ---
 
+
+# 在线演示
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116908019945876&bvid=BV1AvNV6sEux&cid=39891242141&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+---
+
 # 为什么先有 DeekeScript？
 
 在 DeekeHub 出现之前，我们已经持续维护 Android 自动化框架 **DeekeScript** 多年。
