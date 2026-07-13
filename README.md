@@ -1,406 +1,546 @@
-# DeekeHub —— 新一代 Android 自动化云平台
-<img src='https://home.deeke.top/Index/githubStatistic?name=github-ad-android-group-controller' width=0 height=0 />
+# DeekeHub —— Android自动化平台
 
-> **让 Android 自动化，从“控制一台手机”，升级到“管理成千上万台设备”。**
+> 基于 DeekeScript 自动化引擎打造的 Android自动化管理平台，帮助开发者和企业统一管理 Android设备、自动化脚本和任务。
 
-> 产品试用，请访问 [https://hub.deeke.cn](https://hub.deeke.cn)
+产品体验：
+
+https://hub.deeke.cn
+
 
 ![GitHub stars](https://img.shields.io/github/stars/your-repo?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Android-green.svg)
-![JavaScript](https://img.shields.io/badge/script-JavaScript-yellow.svg)
+![Script](https://img.shields.io/badge/script-JavaScript-yellow.svg)
+
 
 ---
 
-## 📖 项目简介
+# 项目简介
 
-2026年的今天，Android 自动化技术已经非常成熟。
+DeekeHub 是一个 Android自动化平台。
 
-无论是 AccessibilityService、OCR、图像识别、模拟点击、远程控制、脚本执行……市面上已经有很多优秀的解决方案。
+它不仅可以运行 Android自动化脚本，还提供设备管理、自动化任务调度、脚本管理、远程查看、日志监控等能力。
 
-但是，当真正进入企业项目后，我们发现新的问题才刚刚开始。
+不同于普通的自动化工具，DeekeHub 建立在多年 Android自动化技术积累之上。
 
-例如：
 
-- 一百台手机如何统一管理？
-- 如何批量执行脚本？
-- 如何远程查看手机画面？
-- 如何给不同客户分配设备？
-- 如何管理脚本版本？
-- 如何让运营人员不会编程也能使用？
-- 如何统计设备在线状态？
-- 如何查看脚本执行日志？
-- 如何支持 SaaS、多租户、权限管理？
+在 DeekeHub 之前，我们已经持续维护：
 
-这些问题，已经不是"自动化脚本"能够解决的。
+- DeekeScript Android自动化引擎
+- Deeke 自动化应用体系
+- 多年的 Android群控和自动化项目方案
 
-它需要的是一个真正的 **Android 自动化平台**。
 
-于是，便有了 **DeekeHub**。
+这些底层能力最终沉淀成为 DeekeHub。
+
+通过 DeekeHub，开发者可以：
+
+- 管理大量 Android设备
+- 批量执行自动化任务
+- 管理自动化脚本
+- 远程查看设备状态
+- 构建自己的 Android自动化服务
+
 
 ---
 
+# 为什么选择 DeekeHub？
 
-# 在线演示
+## 成熟的 Android自动化技术底座
 
-[https://www.bilibili.com/video/BV1AvNV6sEux](https://www.bilibili.com/video/BV1AvNV6sEux)
+Android自动化涉及大量底层能力：
 
----
+- AccessibilityService
+- OCR
+- 图像识别
+- 自动点击
+- 手势控制
+- 网络通信
+- 脚本执行
+- 任务调度
 
-# 为什么先有 DeekeScript？
 
-在 DeekeHub 出现之前，我们已经持续维护 Android 自动化框架 **DeekeScript** 多年。
+这些能力在 DeekeScript 中已经进行了长期封装和优化。
 
-DeekeScript 是整个 DeekeHub 的核心运行引擎。
+开发者无需重复研究 Android底层，只需要关注自动化业务逻辑。
 
-所有脚本最终都会运行在 DeekeScript Runtime 中。
 
-可以理解为：
+技术链路：
 
 ```
 JavaScript
-      │
-      ▼
- DeekeScript Runtime
-      │
-      ▼
- Android 系统能力
-      │
-      ▼
- Accessibility
- OCR
- 图像识别
- HTTP
- WebSocket
- 文件系统
- 多线程
- 定时任务
-......
+
+    ↓
+
+DeekeScript Runtime
+
+    ↓
+
+Android系统能力
+
+    ↓
+
+Accessibility
+OCR
+图像识别
+HTTP
+WebSocket
+自动化任务
 ```
 
-开发者只需要编写 JavaScript。
-
-复杂的 Android API 已经全部封装。
-
-相比直接开发 Android App，开发效率大幅提升（亲测，效率提升5-10倍）。
 
 ---
 
-# 为什么还要做 DeekeHub？
+# 多年 Android自动化经验沉淀
 
-如果说：
+DeekeHub 并不是一个简单的设备管理后台。
 
-DeekeScript 解决的是：
+它来源于真实的 Android自动化项目实践。
 
-> **"如何开发自动化脚本？"**
 
-那么 DeekeHub 解决的是：
+过去几年，我们积累了大量：
 
-> **"如何管理所有自动化脚本？"**
+- Android自动化方案
+- 手机群控方案
+- 批量设备管理经验
+- 自动化运营流程
 
-当设备数量达到几十台、几百台甚至几千台的时候。
 
-真正困难的已经不是写脚本。
+这些经验最终沉淀为平台能力。
 
-而是：
 
-- 如何管理设备？
-- 如何批量执行？
-- 如何查看日志？
-- 如何远程维护？
-- 如何控制权限？
+从单个脚本运行，到几十台、几百台甚至更多设备统一管理。
+
+DeekeHub 解决的是规模化之后的管理问题。
+
+
+---
+
+# 基于移动网络的设备通信
+
+传统 Android自动化管理方式通常依赖：
+
+- USB
+- ADB
+- 局域网
+- 固定 IP
+
+
+这类方式在设备数量增加后，会受到网络环境限制。
+
+
+DeekeHub 采用设备主动连接模式。
+
+Android设备联网后即可接入平台。
+
+
+优势：
+
+- 不需要 USB
+- 不需要 ADB
+- 不需要公网 IP
+- 不需要端口映射
+- 支持异地设备管理
+- 支持大规模设备部署
+
+
+无论设备位于办公室、机房，还是不同城市，都可以统一管理。
+
+
+同时，DeekeHub 也支持局域网通信方式，满足企业内部私有化部署需求。
+
+
+---
+
+# DeekeHub 能解决什么问题？
+
+当 Android自动化规模扩大后，真正困难的不是编写脚本，而是：
+
+- 如何管理大量设备？
+- 如何批量执行任务？
+- 如何发布脚本更新？
+- 如何查看运行状态？
+- 如何定位执行问题？
 - 如何多人协作？
 
-于是，我们把所有能力全部云平台化。
 
-这就是 DeekeHub。
+DeekeHub 将：
+
+- 设备
+- 脚本
+- 任务
+- 日志
+- 权限
+
+统一管理。
+
+
+让 Android自动化从单机工具升级为完整的平台。
 
 ---
 
-# 🚀 DeekeHub 能做什么？
+# 核心功能
 
-## 📱 设备管理
 
-统一管理所有 Android 设备。
+## Android设备管理
+
+统一管理大量 Android设备。
 
 支持：
 
-- 在线状态
-- 网络状态
-- 品牌型号
+- 设备在线状态
+- 设备信息查看
 - 分组管理
 - 标签管理
-- 搜索
 - 批量操作
+- 设备搜索
 
-无需 ADB。
 
-无需 USB。
+无需 USB 和 ADB。
 
-设备联网即可管理（私有化也支持局域网部署）。
+设备联网即可接入平台。
 
----
-
-## 🖥 远程实时查看
-
-支持实时查看 Android 设备画面。
 
 适用于：
 
-- 远程维护
-- 调试脚本
-- 客户演示
-- 在线巡检
+- Android设备集群管理
+- 手机群控系统
+- 云手机管理
+- 企业自动化场景
 
-采用低带宽实时传输。
-
-支持不同画质模式。
-
-让远程查看更加流畅。
 
 ---
 
-## ⚡ 批量执行
+## 自动化脚本管理
 
-真正做到：
+DeekeHub 基于 DeekeScript 自动化引擎。
 
-一次操作。
+开发者可以使用 JavaScript 编写 Android自动化脚本。
 
-全部设备执行。
-
-例如：
-
-- 批量安装 APK
-- 批量更新脚本
-- 批量启动任务
-- 批量停止任务
-- 批量重启设备
-
-真正释放人工。
-
----
-
-## 📜 脚本管理
-
-脚本统一管理。
 
 支持：
 
-- 在线上传
-- 多版本管理
-- 灰度发布
-- 批量下发
-- 在线更新
+- 脚本上传
+- 脚本版本管理
+- 脚本发布
+- 批量部署
+- 脚本运行状态查看
 
-不用再一台台复制脚本。
+
+不需要重复在每台设备上手动更新脚本。
+
 
 ---
 
-## 👥 权限系统
+## Android自动化任务管理
 
-支持企业级权限管理。
+支持创建和管理自动化任务。
+
 
 例如：
 
-- 超级管理员
-- 开发人员
-- 运营人员
+- 批量启动任务
+- 批量停止任务
+- 定时执行任务
+- 多设备同时运行
+- 自动化流程控制
 
-不同角色拥有不同权限。
 
-非常适合商业项目。
+适用于需要大量设备同时执行任务的场景。
+
 
 ---
 
-## 📊 日志中心
+## 远程查看 Android设备
 
-脚本执行过程全部记录。
+支持实时查看 Android手机画面。
+
+
+应用于：
+
+- 自动化调试
+- 远程维护
+- 设备巡检
+- 客户演示
+
+
+采用低带宽实时传输方式。
+
+适合大量 Android设备远程管理。
+
+
+---
+
+## 日志与运行监控
+
+记录自动化任务完整运行过程。
+
 
 包括：
 
-- 执行日志
+- 任务执行日志
 - 错误日志
 - 历史记录
-- 在线状态
-- 运行统计
+- 设备状态
+- 运行结果
 
-真正做到可追踪。
+
+帮助开发者快速定位自动化问题。
+
 
 ---
 
-## 🌐 开放接口
+## 权限与多用户管理
 
-所有核心能力均可通过 API 调用。
+支持企业团队协作。
 
-方便集成：
+
+例如：
+
+- 管理员
+- 开发人员
+- 运营人员
+
+
+不同角色可以拥有不同操作权限。
+
+
+适合企业内部系统和 SaaS 平台使用。
+
+
+---
+
+# 部署方式
+
+
+DeekeHub 支持多种部署方式。
+
+
+## 云端部署
+
+适合：
+
+- 远程设备管理
+- 多地区设备管理
+- SaaS 服务平台
+
+
+Android设备通过互联网连接服务器。
+
+
+---
+
+## 局域网私有化部署
+
+适合：
+
+- 企业内部系统
+- 内网环境
+- 数据隔离场景
+
+
+设备和服务器可以在同一个局域网中运行。
+
+
+---
+
+## 远程服务器私有化部署
+
+支持部署到：
+
+- 云服务器
+- 企业服务器
+- 私有云环境
+
+
+满足企业对数据、安全和部署方式的不同需求。
+
+
+---
+
+# 技术架构
+
+
+```
+                    DeekeHub
+
+              Web 管理后台
+
+       设备管理 / 任务管理 / 脚本管理
+       日志中心 / 权限管理 / API
+
+                    |
+
+             HTTP / WebSocket
+
+                    |
+
+        AndroidDevice  AndroidDevice
+                    |
+                    |
+            DeekeScript Runtime
+
+                    |
+
+      Accessibility / OCR / 图像识别
+      自动点击 / 网络通信 / 自动化任务
+
+```
+
+
+---
+
+# 开放接口
+
+DeekeHub 提供 API 能力。
+
+
+方便接入：
 
 - ERP
 - CRM
 - OA
-- SaaS
+- SaaS 平台
 - 企业内部系统
 
----
 
-# 🏗 平台架构
+让 Android自动化能力可以融入现有业务流程。
 
-```
-                        DeekeHub
-                  ┌───────────────────┐
-                  │  Web 管理后台      │
-                  ├───────────────────┤
-                  │  任务管理          │
-                  │  脚本管理          │
-                  │  设备管理          |
-                  |  角色管理          │
-                  │  日志中心          │
-                  │  API              │
-                  └─────────┬─────────┘
-                            │
-             WebSocket / HTTP / LiveKit
-                            │
-        ┌───────────────────┼────────────────────┐
-        │                   │                    │
-    Android             Android             Android
-      Device              Device              Device
-        │                   │                    │
-  DeekeScript        DeekeScript        DeekeScript
-        │                   │                    │
-Accessibility      OCR      图像识别     自动化任务
-```
 
 ---
 
-# 💡 为什么选择 DeekeHub？
+# 应用场景
 
-因为它不仅仅是一个脚本平台。
-
-更是一个完整的 Android 自动化基础设施。
-
-它能够帮助企业完成：
-
-✅ 自动化开发
-
-✅ 自动化部署
-
-✅ 自动化管理
-
-✅ 自动化运维
-
-✅ 自动化监控
-
-真正形成完整闭环。
-
----
-
-# 🎯 典型应用场景
 
 适用于：
 
-- Android 自动化
-- 企业自动化办公
-- APP 自动测试
-- 云手机管理
-- 手机农场
-- SaaS 平台
-- AI Agent 执行平台
-- 批量设备管理
-- Android 远程运维
-- 企业内部工具
+
+## Android自动化开发
+
+快速开发和管理 Android自动化项目。
+
+
+## 自动化脚本平台
+
+为脚本提供统一运行和管理环境。
+
+
+## APP 自动化测试
+
+管理测试设备，批量执行测试任务。
+
+
+## 手机群控系统
+
+统一管理大量 Android设备。
+
+
+## 云手机管理
+
+远程管理云端 Android设备。
+
+
+## 企业自动化办公
+
+将重复操作转化为自动化流程。
+
+
+## AI Agent 执行平台
+
+让 AI Agent 可以调用 Android设备执行任务。
+
 
 ---
 
-# ⭐ 为什么 DeekeScript 值得了解？
+# 关于 DeekeScript
 
-很多人第一次接触 Android 自动化。
 
-都会直接开始研究：
+DeekeScript 是 DeekeHub 的核心自动化运行引擎。
+
+
+它封装了 Android自动化开发中的常用能力：
+
 
 - AccessibilityService
-- MediaProjection
 - OCR
-- OpenCV
 - 图像识别
-- 手势模拟
-- Socket
+- HTTP
 - WebSocket
+- 文件操作
+- 多线程任务
+- 定时任务
 
-实际上。
 
-这些能力 DeekeScript 已经全部封装。
+开发者只需要编写 JavaScript。
 
-开发者只需要关注：
+复杂的 Android底层能力已经由 DeekeScript 处理。
 
-> **业务逻辑。**
 
-而不是 Android 底层。
+DeekeScript 文档：https://doc.deeke.cn
 
-这也是 DeekeScript 多年来持续优化的目标。
 
 ---
 
-# 🚀 我们正在持续完善
+# 未来计划
 
-未来计划持续加入：
 
-- AI Agent
+持续完善：
+
+- AI Agent 自动化
 - 工作流编排
-- 插件市场
+- 插件系统
 - 多节点调度
 - SDK
-- Docker 一键部署
+- Docker 部署
 - 更多开放 API
-- 更多设备管理能力
 
-欢迎一起交流，共同完善生态。
 
 ---
 
-# 🌍 官方网站
+# 官方网站
 
-**DeekeHub**
 
-👉 https://hub.deeke.cn
+DeekeHub：https://hub.deeke.cn
 
----
-
-# 📚 DeekeScript官方文档
-
-👉 https://doc.deeke.cn
 
 ---
 
-# ❤️ 如果这个项目对你有所帮助
+# 支持项目
 
-欢迎点一个 **⭐ Star**。
 
-你的支持，将是 DeekeHub 和 DeekeScript 持续迭代最大的动力。
+如果 DeekeHub 对你有所帮助，欢迎 Star ⭐
+
+
+你的支持会帮助项目持续迭代。
+
 
 ---
 
-# 📢 写在最后
+# 写在最后
 
-我们一直认为：
 
-> **未来的 Android，不应该是一台一台去操作。**
+Android自动化不应该只停留在运行一个脚本。
 
-而应该像服务器一样：
+
+随着设备数量增加，更需要：
 
 - 可编程
 - 可管理
 - 可监控
 - 可扩展
-- 可协作
 
-DeekeScript 负责让开发更简单。
 
-DeekeHub 负责让管理更高效。
+DeekeScript 负责降低 Android自动化开发门槛。
 
-希望它能够帮助更多开发者，把更多时间留给真正有价值的事情。
+DeekeHub 负责让 Android自动化设备和任务更容易管理。
 
 
 ### 进群交流
 
-![deekeHub开发群](image.png)
 
-> 如需联系作者本人，请访问[https://hub.deeke.cn](https://hub.deeke.cn)
+![DeekeHub开发群](image.png)
+
+
+> 如需联系作者本人，请访问：
+>
+> https://hub.deeke.cn
